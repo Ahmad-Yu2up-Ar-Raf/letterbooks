@@ -58,7 +58,7 @@ function SignInModal({ className }: { className?: string}) {
           toast.loading("Login....", {id: "login"});
                 setLoading(true)
         startTransition(async () => { 
-     router.post(route('login.store'),  input, { 
+     router.post(('login.store'),  input, { 
          preserveScroll: true,
          preserveState: true,
          forceFormData: true, 

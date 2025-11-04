@@ -21,10 +21,9 @@ import { Link, router, usePage } from "@inertiajs/react";
 import { Logo } from "@/components/ui/fragments/assets/svg/logo";
 import { User as profile, type SharedData } from '@/types';
 import { useMotionValueEvent, useScroll , motion} from "framer-motion";
+import DropdownMenuUserMenuDemo from "./useProfile";
 
-import DropdownMenuUserMenuDemo from "d:/Documents/sundress/resources/js/components/ui/core/layout/header/useProfile";
-
-import { useModal } from "d:/Documents/sundress/resources/js/components/ui/core/layout/provider/ContextProvider";
+import { useModal } from "../providers/ContextProvider";
 
 
 const TopMenu = [
@@ -99,7 +98,7 @@ const onClick = () => open({ redirectTo: "/" });
              <div className="size-10 sm:w-5 md:size-8 transition-transform duration-300 group-hover:scale-105 group-hover:brightness-110">
                             <Logo />
                           </div>
-              <span className="">Sundress</span>
+              <span className="">Letterbooks</span>
             </h1>
           </div>
               <div className="flex items-center text-xs ">
@@ -174,7 +173,7 @@ const onClick = () => open({ redirectTo: "/" });
           <div className="flex items-center justify-between">
              <h1 className="text-lg font-bold flex items-center gap-3 ">
               <Logo className=" [&_svg]:size-9" />
-              <span className="">Sundress</span>
+              <span className="">Letterbooks</span>
             </h1>
           
           </div>

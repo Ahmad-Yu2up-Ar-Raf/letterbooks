@@ -15,14 +15,14 @@ import { cn } from '@/lib/utils';
 
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { ModalProvider } from './ContextProvider';
-import Neslatter from '@/components/ui/fragments/custom-ui/Neslatter';
+import Neslatter from '../../block/Neslatter';
 import SignInModal from '../../auth/SignInModal';
 import { SiteHeader } from '../header/SiteHeader';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 
 
-const Providers = ({ children }: { children: React.ReactNode  }) => {
+const Providers = ({ children , className }: { children: React.ReactNode  , className?: string }) => {
 
 const disable = [ '/seller' , '/settings',  '/dashboard' , '/login'  , '/register']
 const currentPath = window.location.pathname;
@@ -58,7 +58,7 @@ const currentPath = window.location.pathname;
                     >
                         <div className={cn("mx-auto flex flex-col gap-13   lg:gap-25   h-full w-full", 
 
-
+                            className
 
                         ) }>
                     

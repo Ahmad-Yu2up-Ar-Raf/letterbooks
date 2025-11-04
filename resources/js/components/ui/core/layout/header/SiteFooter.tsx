@@ -95,7 +95,7 @@ export default function SiteFooter({ className, ...props }: StickyFooterProps) {
           <div className="w-full flex items-center justify-center ">
             <h1 className="text-center relative text-[18dvw] lg:text-[16em] font-bold bg-clip-text tracking-tighter bg-linear-to-b to-background text-transparent from-yellow-950/50 select-none">
   
-                Sundress
+                Letterbooks
             
             </h1>
           </div>
