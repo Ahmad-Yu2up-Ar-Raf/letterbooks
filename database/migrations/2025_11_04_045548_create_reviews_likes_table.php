@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('reviews_id')->constrained("reviews")->onDelete('cascade');
-            $table->unique(['user_id', 'movie_id']);
+            $table->unique(['user_id', 'reviews_id']);
             $table->index('reviews_id');
         });
     }

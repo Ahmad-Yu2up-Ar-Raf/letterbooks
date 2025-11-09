@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('likes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('movie_id');
+                   $table->unsignedBigInteger('tmdb_id')->unique();
+                   $table->string('poster_path')->nullable();
+            $table->json('meta')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->unique(['user_id', 'movie_id']);
-            $table->index('movie_id');
+            $table->unique(['user_id', 'tmdb_id']);
+            $table->index('tmdb_id');
         });
     }
 

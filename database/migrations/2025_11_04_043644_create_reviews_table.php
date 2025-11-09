@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('movie_id')->constrained()->onDelete('cascade');
-            $table->longText('comments')->nullable();
+               $table->unsignedBigInteger('tmdb_id');
+                   $table->string('poster_path')->nullable();
+            $table->json('meta')->nullable();
+            $table->longText('review')->nullable();
             $table->tinyInteger('star_rating');
             $table->boolean('rewatch')->default(false);
             $table->json('tags')->nullable()->comment('Array of string');

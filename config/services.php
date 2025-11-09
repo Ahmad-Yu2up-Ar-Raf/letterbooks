@@ -34,5 +34,10 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
-
+'tmdb' => [
+    'api_key' => env('TMDB_API_KEY'),
+    'base_url' => env('TMDB_BASE_URL', 'https://api.themoviedb.org/3/'), // tambah trailing slash
+    'image_base' => env('TMDB_IMAGE_BASE', 'https://image.tmdb.org/t/p/w500'),
+    'cache_ttl' => env('TMDB_CACHE_TTL', 3600),
+],
 ];
